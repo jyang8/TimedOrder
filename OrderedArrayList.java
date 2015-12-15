@@ -145,14 +145,17 @@ public class OrderedArrayList {
 
 	// testing linear search
 	for( int i = 0; i < 15; i++ ) {
-	    int valToAdd = (int)( 50 * Math.random() );
+	    int valToAdd = i; //(int)( 50 * Math.random() );
 	    System.out.println( valToAdd );
 	    Franz.addLinear( valToAdd );
 	}
 
+		
 	System.out.println("\nafter population via addLinear() calls:");
 	System.out.println( Franz );
 	System.out.println();
+
+	System.out.println(Franz.findLin(10));
 
 	Franz = new OrderedArrayList();
 
@@ -161,7 +164,7 @@ public class OrderedArrayList {
 				
 	// testing binary search
 	for( int i = 0; i < 15; i++ ) {
-	    int valToAdd = (int)( 50 * Math.random() );
+	    int valToAdd = i; //(int)( 50 * Math.random() );
 	    System.out.println( valToAdd );
 	    Franz.addBinary( valToAdd );
 	}
@@ -169,6 +172,8 @@ public class OrderedArrayList {
 	System.out.println("\nafter population via addBinary() calls:");
 	System.out.println( Franz );
 	System.out.println();
+	
+	System.out.println(Franz.findBin(10));
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	   INSERT WELL-COMMENT TIMING APPARATUS HERE
