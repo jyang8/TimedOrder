@@ -164,10 +164,10 @@ public class OrderedArrayList {
 
 	OrderedArrayList Franz = new OrderedArrayList();
 
-	System.out.println("\nValues to add via addBinary() calls:");
+	System.out.println("\nGive it a second\n");
 
 	//so we are consistant
-	int num = 100000;
+	int num = 50000;
        
 	// testing binary search
 	for( int i = 0; i < num; i++ ) {
@@ -187,23 +187,23 @@ public class OrderedArrayList {
 
 	*/
 	//avg time for lin search
-	long linTimeAvg = 0;
+	double linTimeAvg = 0;
 
 	//# of searches done (so we can take the right average)
-	long linTimeCtr = 0;
+	double linTimeCtr = 0;
 
 	//avg time for lin search
-	long binTimeAvg = 0;
+	double binTimeAvg = 0;
 
 	//# of searches done (so we can take the right average)
-	long binTimeCtr = 0;
+	double binTimeCtr = 0;
 
 	//time before
-	long start = 0;
+	double start = 0;
 	//time after
-	long finish = 0;
+	double finish = 0;
 	//time during
-	long temp = 0;
+	double temp = 0;
 
 	//random number, must store it so it is the same for both searches
 	int rand = 0;
