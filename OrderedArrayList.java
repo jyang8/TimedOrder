@@ -100,7 +100,7 @@ public class OrderedArrayList {
     public int findLin( Comparable target ) 
     { 
 	for( int p = 0; p < _data.size(); p++ ) {
-	    if ( target.compareTo( _data.get(p) ) < 0 ) { //newVal < oal[p]
+	    if ( target.compareTo( _data.get(p) ) == 0 ) { //newVal < oal[p]
 		return p;
 	    }
 	}
@@ -155,7 +155,11 @@ public class OrderedArrayList {
 	System.out.println( Franz );
 	System.out.println();
 
-	System.out.println(Franz.findLin(10));
+	System.out.println("\nsearch via findLin() calls:");
+	for( int i = 0; i < 16; i++ ) {
+	    System.out.println( i + ": " + Franz.findLin(i));
+	}
+
 
 	Franz = new OrderedArrayList();
 
@@ -172,8 +176,12 @@ public class OrderedArrayList {
 	System.out.println("\nafter population via addBinary() calls:");
 	System.out.println( Franz );
 	System.out.println();
-	
-	System.out.println(Franz.findBin(10));
+        
+
+	System.out.println("\nsearch via findBin() calls:");
+	for( int i = 0; i < 16; i++ ) {
+	    System.out.println( i + ": " + Franz.findBin(i));
+	}
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	   INSERT WELL-COMMENT TIMING APPARATUS HERE
