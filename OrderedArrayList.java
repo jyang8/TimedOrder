@@ -1,6 +1,6 @@
 // Team -- Jessica Yang, Pardeep Singh, Jack Schluger
 // APCS1 pd9
-// HW48 -- 
+// HW48 -- Halfling Time Trials
 // 2015-12-14
 
 /*============================================
