@@ -100,7 +100,11 @@ public class OrderedArrayList {
     public int findLin( Comparable target ) 
     { 
 	for( int p = 0; p < _data.size(); p++ ) {
+<<<<<<< HEAD
+	    if ( target.compareTo( _data.get(p) ) < 0 ) { //target < oal[p]
+=======
 	    if ( newVal.compareTo( _data.get(p) ) < 0 ) { //newVal < oal[p]
+>>>>>>> 74cce7e6cdc04f5e3c0bc91d4a850a616a914a4f
 		return p;
 	    }
 	}
@@ -116,21 +120,38 @@ public class OrderedArrayList {
 	int lo = 0;
 	int med = 0;
 	int hi = _data.size()-1;
+<<<<<<< HEAD
+	
+	while ( lo <= hi ) { //running until target is found or bounds cross
+
+	    med = (lo + hi) / 2;
+	    int x = _data.get(med).compareTo( target );
+=======
 
 	while ( lo <= hi ) { //running until target is found or bounds cross
 
 	    med = (lo + hi) / 2;
 	    int x = _data.get(med).compareTo( newVal );
+>>>>>>> 74cce7e6cdc04f5e3c0bc91d4a850a616a914a4f
 	        
 	    if ( x == 0 ) { //equal value found, insert here
 		return med;
 	    }
+<<<<<<< HEAD
+	    else if ( x > 0 ) //target < med, so look at lower half of data
+		hi = med - 1;
+	    else //target > med, so look at upper half of data
+		lo = med + 1;
+	}
+	// If you make it this far, target was not in the ArrayList.
+=======
 	    else if ( x > 0 ) //newVal < med, so look at lower half of data
 		hi = med - 1;
 	    else //newVal > med, so look at upper half of data
 		lo = med + 1;
 	}
 	// If you make it this far, newVal was not in the ArrayList.
+>>>>>>> 74cce7e6cdc04f5e3c0bc91d4a850a616a914a4f
 	// So insert at lo. Q: How do you know lo is correct insertion index?
 	return -1;
     }
@@ -140,6 +161,7 @@ public class OrderedArrayList {
     public static void main( String[] args ) 
     {
 	OrderedArrayList Franz = new OrderedArrayList();
+<<<<<<< HEAD
 
 	System.out.println("\nValues to add via addLinear() calls:");
 
@@ -153,6 +175,23 @@ public class OrderedArrayList {
 	System.out.println("\nafter population via addLinear() calls:");
 	System.out.println( Franz );
 	System.out.println();
+
+	System.out.println( Franz.findLin(Franz.get(6)));	
+=======
+
+	System.out.println("\nValues to add via addLinear() calls:");
+
+	// testing linear search
+	for( int i = 0; i < 15; i++ ) {
+	    int valToAdd = (int)( 50 * Math.random() );
+	    System.out.println( valToAdd );
+	    Franz.addLinear( valToAdd );
+	}
+
+	System.out.println("\nafter population via addLinear() calls:");
+	System.out.println( Franz );
+	System.out.println();
+>>>>>>> 74cce7e6cdc04f5e3c0bc91d4a850a616a914a4f
 
 	Franz = new OrderedArrayList();
 
@@ -170,6 +209,11 @@ public class OrderedArrayList {
 	System.out.println( Franz );
 	System.out.println();
 
+<<<<<<< HEAD
+	System.out.println( Franz.findBin(Franz.get(6)));	
+
+=======
+>>>>>>> 74cce7e6cdc04f5e3c0bc91d4a850a616a914a4f
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	   INSERT WELL-COMMENT TIMING APPARATUS HERE
 	   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
