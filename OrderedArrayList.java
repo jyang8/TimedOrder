@@ -140,11 +140,11 @@ public class OrderedArrayList {
     public static void main( String[] args ) 
     {
 	OrderedArrayList Franz = new OrderedArrayList();
-
-	System.out.println("\nValues to add via addLinear() calls:");
+	/*
+	//	System.out.println("\nValues to add via addLinear() calls:");
 
 	// testing linear search
-	for( int i = 0; i < 15; i++ ) {
+	for( int i = 0; i < 100000001; i++ ) {
 	    int valToAdd = i; //(int)( 50 * Math.random() );
 	    System.out.println( valToAdd );
 	    Franz.addLinear( valToAdd );
@@ -156,36 +156,95 @@ public class OrderedArrayList {
 	System.out.println();
 
 	System.out.println("\nsearch via findLin() calls:");
-	for( int i = 0; i < 16; i++ ) {
+	for( int i = 0; i < 20; i++ ) {
 	    System.out.println( i + ": " + Franz.findLin(i));
 	}
+	
+	//	Franz = new OrderedArrayList();
 
+	//System.out.println("\nValues to add via addBinary() calls:");
 
-	Franz = new OrderedArrayList();
-
-	System.out.println("\nValues to add via addBinary() calls:");
-
-				
+	*/			
 	// testing binary search
-	for( int i = 0; i < 15; i++ ) {
+	for( int i = 0; i < 1000001; i++ ) {
 	    int valToAdd = i; //(int)( 50 * Math.random() );
-	    System.out.println( valToAdd );
+	    //  System.out.println( valToAdd );
 	    Franz.addBinary( valToAdd );
 	}
-
+	/*
 	System.out.println("\nafter population via addBinary() calls:");
 	System.out.println( Franz );
 	System.out.println();
         
 
-	System.out.println("\nsearch via findBin() calls:");
-	for( int i = 0; i < 16; i++ ) {
+       	System.out.println("\nsearch via findBin() calls:");
+	for( int i = 0; i < 20; i++ ) {
 	    System.out.println( i + ": " + Franz.findBin(i));
 	}
-
+	*/
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	   INSERT WELL-COMMENT TIMING APPARATUS HERE
 	   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+	System.out.println("\nTime for First number using findLin() calls:");
+	double totalTime = 0;
+	for (int x = 0; x < 10001; x++) {
+	    double time = System.currentTimeMillis();
+	    Franz.findLin(0);
+	    totalTime += (System.currentTimeMillis() - time);
+	}
+	System.out.println( "Total: " + totalTime );
+	System.out.println( "Average: " + (totalTime /100000.0));
+
+	System.out.println("\nTime for Middle number using findLin() calls:");
+	totalTime = 0;
+	for (int x = 0; x < 100001; x++) {
+	    double time = System.currentTimeMillis();
+	    Franz.findLin(50000);
+	    totalTime += (System.currentTimeMillis() - time);
+	}
+	System.out.println( "Total: " + totalTime );
+	System.out.println( "Average: " + (totalTime /100000.0));
+
+	System.out.println("\nTime for Last number using findLin() calls:");
+	totalTime = 0;
+	for (int x = 0; x < 100001; x++) {
+	    double time = System.currentTimeMillis();
+	    Franz.findLin(100000);
+	    totalTime += (System.currentTimeMillis() - time);
+	}
+	System.out.println( "Total: " + totalTime );
+	System.out.println( "Average: " + (totalTime /100000.0));
+
+	System.out.println("\nTime for First number using findBin() calls:");
+	totalTime = 0;
+	for (int x = 0; x < 100001; x++) {
+	    double time = System.currentTimeMillis();
+	    Franz.findBin(0);
+	    totalTime += (System.currentTimeMillis() - time);
+	}
+	System.out.println( "Total: " + totalTime );
+	System.out.println( "Average: " + (totalTime /100000.0));
+
+	System.out.println("\nTime for Middle number using findBin() calls:");
+	totalTime = 0;
+	for (int x = 0; x < 100001; x++) {
+	    double time = System.currentTimeMillis();
+	    Franz.findBin(50000);
+	    totalTime += (System.currentTimeMillis() - time);
+	}
+	System.out.println( "Total: " + totalTime );
+	System.out.println( "Average: " + (totalTime /100000.0));
+
+	System.out.println("\nTime for Last number using findBin() calls:");
+	totalTime = 0;
+	for (int x = 0; x < 100001; x++) {
+	    double time = System.currentTimeMillis();
+	    Franz.findBin(100000);
+	    totalTime += (System.currentTimeMillis() - time);
+	}
+	System.out.println( "Total: " + totalTime );
+	System.out.println( "Average: " + (totalTime /100000.0));
     }
 
 }//end class OrderedArrayList
