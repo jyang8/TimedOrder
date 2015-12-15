@@ -1,4 +1,4 @@
-// Team -- Jessica Yang, Pardeep Singh, Jack Schluger
+// Team Pittsburgh-- Jessica Yang, Pardeep Singh, Jack Schluger
 // APCS1 pd9
 // HW48 -- Halfling Time Trials
 // 2015-12-14
@@ -186,65 +186,72 @@ public class OrderedArrayList {
 	   INSERT WELL-COMMENT TIMING APPARATUS HERE
 	   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+
+	//findLin() First Number
 	System.out.println("\nTime for First number using findLin() calls:");
-	double totalTime = 0;
-	for (int x = 0; x < 10001; x++) {
-	    double time = System.currentTimeMillis();
-	    Franz.findLin(0);
-	    totalTime += (System.currentTimeMillis() - time);
+	double totalTime = 0;//creates a variable to hold the total time of all the trials
+	for (int x = 0; x < 10001; x++) {//runs 100000 trials
+	    double time = System.currentTimeMillis();//sets starting time
+	    Franz.findLin(0);//runs findLin()
+	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
 	}
-	System.out.println( "Total: " + totalTime );
-	System.out.println( "Average: " + (totalTime /100000.0));
+	System.out.println( "Total: " + totalTime );//prints total time
+	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
 
+	//findLin() Last Number
 	System.out.println("\nTime for Middle number using findLin() calls:");
-	totalTime = 0;
-	for (int x = 0; x < 100001; x++) {
-	    double time = System.currentTimeMillis();
-	    Franz.findLin(50000);
-	    totalTime += (System.currentTimeMillis() - time);
+	totalTime = 0;//resets time
+	for (int x = 0; x < 100001; x++) {//runs 100000 trials
+	    double time = System.currentTimeMillis();//sets starting time
+	    Franz.findLin(50000);//runs findLin()
+	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
 	}
-	System.out.println( "Total: " + totalTime );
-	System.out.println( "Average: " + (totalTime /100000.0));
+	System.out.println( "Total: " + totalTime );//prints total time
+	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
 
+	//findLin() Last Number
 	System.out.println("\nTime for Last number using findLin() calls:");
-	totalTime = 0;
-	for (int x = 0; x < 100001; x++) {
-	    double time = System.currentTimeMillis();
-	    Franz.findLin(100000);
-	    totalTime += (System.currentTimeMillis() - time);
+	totalTime = 0;//resets time
+	for (int x = 0; x < 100001; x++) {//runs 100000 trials
+	    double time = System.currentTimeMillis();//sets starting time
+	    Franz.findLin(100000);//runs findLin()
+	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
 	}
-	System.out.println( "Total: " + totalTime );
-	System.out.println( "Average: " + (totalTime /100000.0));
+	System.out.println( "Total: " + totalTime );//prints total time
+	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
 
+	//findBin() First Number
 	System.out.println("\nTime for First number using findBin() calls:");
-	totalTime = 0;
-	for (int x = 0; x < 100001; x++) {
-	    double time = System.currentTimeMillis();
-	    Franz.findBin(0);
-	    totalTime += (System.currentTimeMillis() - time);
+	totalTime = 0;//resests time
+	for (int x = 0; x < 100001; x++) {//runs 100000 trials
+	    double time = System.currentTimeMillis();//sets starting time
+	    Franz.findBin(0);//runs findBin()
+	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
 	}
-	System.out.println( "Total: " + totalTime );
-	System.out.println( "Average: " + (totalTime /100000.0));
+	System.out.println( "Total: " + totalTime );//prints total time
+	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
 
+	//findBin() Middle Number
 	System.out.println("\nTime for Middle number using findBin() calls:");
-	totalTime = 0;
-	for (int x = 0; x < 100001; x++) {
-	    double time = System.currentTimeMillis();
-	    Franz.findBin(50000);
-	    totalTime += (System.currentTimeMillis() - time);
+	totalTime = 0;//resets time
+	for (int x = 0; x < 100001; x++) {//runs 100000 trials
+	    double time = System.currentTimeMillis();//sets starting time
+	    Franz.findBin(50000);//runs findBin()
+	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
 	}
-	System.out.println( "Total: " + totalTime );
-	System.out.println( "Average: " + (totalTime /100000.0));
+	System.out.println( "Total: " + totalTime );//prints total time
+	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
 
+	//findBin() Last Number
 	System.out.println("\nTime for Last number using findBin() calls:");
-	totalTime = 0;
-	for (int x = 0; x < 100001; x++) {
-	    double time = System.currentTimeMillis();
-	    Franz.findBin(100000);
-	    totalTime += (System.currentTimeMillis() - time);
+	totalTime = 0;//resets time
+	for (int x = 0; x < 100001; x++) {//runs 100000 trials
+	    double time = System.currentTimeMillis();//sets starting time
+	    Franz.findBin(100000);//runs findBin()
+	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
 	}
-	System.out.println( "Total: " + totalTime );
-	System.out.println( "Average: " + (totalTime /100000.0));
+	System.out.println( "Total: " + totalTime );//prints total time
+	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
     }
 
 }//end class OrderedArrayList
