@@ -166,7 +166,7 @@ public class OrderedArrayList {
 
 	*/			
 	// testing binary search
-	for( int i = 0; i < 1000001; i++ ) {
+	for( int i = 0; i < 100001; i++ ) {
 	    int valToAdd = i; //(int)( 50 * Math.random() );
 	    //  System.out.println( valToAdd );
 	    Franz.addBinary( valToAdd );
