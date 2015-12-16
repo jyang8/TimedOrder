@@ -191,9 +191,9 @@ public class OrderedArrayList {
 	System.out.println("\nTime for First number using findLin() calls:");
 	double totalTime = 0;//creates a variable to hold the total time of all the trials
 	for (int x = 0; x < 10001; x++) {//runs 100000 trials
-	    double time = System.currentTimeMillis();//sets starting time
+	    double time = System.nanoTime();//sets starting time
 	    Franz.findLin(0);//runs findLin()
-	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
+	    totalTime += (System.nanoTime() - time);//finds the difference in current time and start time and adds to total time
 	}
 	System.out.println( "Total: " + totalTime );//prints total time
 	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
@@ -202,9 +202,9 @@ public class OrderedArrayList {
 	System.out.println("\nTime for Middle number using findLin() calls:");
 	totalTime = 0;//resets time
 	for (int x = 0; x < 100001; x++) {//runs 100000 trials
-	    double time = System.currentTimeMillis();//sets starting time
+	    double time = System.nanoTime();//sets starting time
 	    Franz.findLin(50000);//runs findLin()
-	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
+	    totalTime += (System.nanoTime() - time);//finds the difference in current time and start time and adds to total time
 	}
 	System.out.println( "Total: " + totalTime );//prints total time
 	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
@@ -213,9 +213,9 @@ public class OrderedArrayList {
 	System.out.println("\nTime for Last number using findLin() calls:");
 	totalTime = 0;//resets time
 	for (int x = 0; x < 100001; x++) {//runs 100000 trials
-	    double time = System.currentTimeMillis();//sets starting time
+	    double time = System.nanoTime();//sets starting time
 	    Franz.findLin(100000);//runs findLin()
-	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
+	    totalTime += (System.nanoTime() - time);//finds the difference in current time and start time and adds to total time
 	}
 	System.out.println( "Total: " + totalTime );//prints total time
 	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
@@ -224,9 +224,9 @@ public class OrderedArrayList {
 	System.out.println("\nTime for First number using findBin() calls:");
 	totalTime = 0;//resests time
 	for (int x = 0; x < 100001; x++) {//runs 100000 trials
-	    double time = System.currentTimeMillis();//sets starting time
+	    double time = System.nanoTime();//sets starting time
 	    Franz.findBin(0);//runs findBin()
-	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
+	    totalTime += (System.nanoTime() - time);//finds the difference in current time and start time and adds to total time
 	}
 	System.out.println( "Total: " + totalTime );//prints total time
 	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
@@ -235,9 +235,9 @@ public class OrderedArrayList {
 	System.out.println("\nTime for Middle number using findBin() calls:");
 	totalTime = 0;//resets time
 	for (int x = 0; x < 100001; x++) {//runs 100000 trials
-	    double time = System.currentTimeMillis();//sets starting time
+	    double time = System.nanoTime();//sets starting time
 	    Franz.findBin(50000);//runs findBin()
-	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
+	    totalTime += (System.nanoTime() - time);//finds the difference in current time and start time and adds to total time
 	}
 	System.out.println( "Total: " + totalTime );//prints total time
 	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
@@ -246,13 +246,12 @@ public class OrderedArrayList {
 	System.out.println("\nTime for Last number using findBin() calls:");
 	totalTime = 0;//resets time
 	for (int x = 0; x < 100001; x++) {//runs 100000 trials
-	    double time = System.currentTimeMillis();//sets starting time
+	    double time = System.nanoTime();//sets starting time
 	    Franz.findBin(100000);//runs findBin()
-	    totalTime += (System.currentTimeMillis() - time);//finds the difference in current time and start time and adds to total time
+	    totalTime += (System.nanoTime() - time);//finds the difference in current time and start time and adds to total time
 	}
 	System.out.println( "Total: " + totalTime );//prints total time
 	System.out.println( "Average: " + (totalTime /100000.0));//prints average time per trial
     }
 
 }//end class OrderedArrayList
- 
